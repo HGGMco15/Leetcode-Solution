@@ -1,0 +1,32 @@
+name: Reader Feedback Report
+description: Submit a report, typo fix, or feedback about the content.
+title: "[Report]: "
+labels: ["reader-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a report! Please fill out the details below to help us improve.
+  - type: input
+    id: location
+    attributes:
+      label: Where did you find the issue?
+      placeholder: (e.g., Chapter 3, Page 45, or URL link)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the Report
+      placeholder: Tell us what needs to be fixed or reviewed...
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Type of Report
+      options:
+        - Typo / Spelling error
+        - Broken link or formatting
+        - Incorrect factual information
+        - General suggestion
